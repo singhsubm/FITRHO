@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+/* Custom Font from your snippet */
+@font-face {
+  font-family: "longline";
+  src: url("https://assets.codepen.io/756881/Longline+Quart+FREE.ttf") format("truetype");
+}
+/* body{
+    background: url(../assets/background.png);
+} */
+
+/* FITRHO Text Styling */
+.fitrho-text {
+  font-size: 24vw; /* Adjusted for responsiveness */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 10%; /* Adjusted positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 234, 0) 30%,
+    rgb(255 255 255 / 0%) 76%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #00000000; /* Makes it look like the stroke/gradient effect */
+  -webkit-text-stroke: 6px rgba(0, 0, 0, 0.3); /* Added Gold Stroke for visibility on dark */
+  z-index: 0;
+}
+
+/* Wheel Container */
+.slider-section {
+  height: 50vh; /* Adjusted height */
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  overflow: visible;
+}
+
+.wheel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300vw; /* Massive width for the curve */
+  height: 300vw;
+  max-width: 2000px;
+  max-height: 2000px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.wheel__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel__card img {
+  width: 100%;
+  border-radius: 10px; /* Added rounded corners */
+  pointer-events: none; /* Important for drag */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+
+
+

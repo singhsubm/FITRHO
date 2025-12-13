@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@layer base {
+  ::selection {
+    /* background-color: theme('colors.brand-gold'); */
+    /* color: theme('colors.brand-dark'); */
+  }
+}   
