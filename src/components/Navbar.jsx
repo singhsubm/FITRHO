@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Logo (Left) */}
         <div
          className="text-3xl font-bold tracking-widest text-brand-gold uppercase font-longline text-yellow-300">
-          FITRHO
+          <a href="#home">FITRHO</a>
         </div>
 
         {/* Links (Mid) */}
@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Reach Us (Right) - Pill Shape */}
         <button className=" font-bold px-8 py-2 rounded-full transition-all duration-300 bg-yellow-300 text-black  cursor-pointer  hover:bg-white shadow-md">
-          Reach Us
+          <a href="#contact">Reach Us</a>
         </button>
 
       </div>

@@ -29,9 +29,9 @@ const Footer = () => {
               <div className="space-y-2">
                 <h4 className="text-white font-bold uppercase text-xs">Quick Links</h4>
                 <ul className="space-y-1 text-gray-500 text-xs font-nunito">
-                  <li className="hover:text-brand-gold cursor-pointer">Home</li>
-                  <li className="hover:text-brand-gold cursor-pointer">About</li>
-                  <li className="hover:text-brand-gold cursor-pointer">Products</li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#home"> Home</a></li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#story">About</a></li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#services">Products</a></li>
                 </ul>
               </div>
 
@@ -39,9 +39,9 @@ const Footer = () => {
               <div className="space-y-2">
                 <h4 className="text-white font-bold uppercase text-xs">Resources</h4>
                 <ul className="space-y-1 text-gray-500 text-xs font-nunito">
-                  <li className="hover:text-brand-gold cursor-pointer">FAQs</li>
-                  <li className="hover:text-brand-gold cursor-pointer">Reviews</li>
-                  <li className="hover:text-brand-gold cursor-pointer">Support</li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#faqs">FAQs</a></li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#review">Reviews</a></li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#support">Support</a></li>
                 </ul>
               </div>
 
@@ -49,9 +49,9 @@ const Footer = () => {
               <div className="space-y-2">
                 <h4 className="text-white font-bold uppercase text-xs">Company</h4>
                 <ul className="space-y-1 text-gray-500 text-xs font-nunito">
-                  <li className="hover:text-brand-gold cursor-pointer">Story</li>
-                  <li className="hover:text-brand-gold cursor-pointer">Team</li>
-                  <li className="hover:text-brand-gold cursor-pointer">Legal</li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#story">Story</a></li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#team">Team</a></li>
+                  <li className="hover:text-brand-gold cursor-pointer"><a href="#legal">Legal</a></li>
                 </ul>
               </div>
             </div>

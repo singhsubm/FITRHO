@@ -141,8 +141,10 @@ const Hero = () => {
 
       {/* Footer Text */}
       <div className="cursor-pointer z-10 absolute bottom-10 left-1/2 -translate-x-1/2 text-xs text-white/70 tracking-widest uppercase">
-        Scroll to Explore
+        <a href="#story">
+          Scroll to Explore
         <h1 className='text-center text-4xl'>↓</h1>
+        </a>
       </div>
     </div>
   );

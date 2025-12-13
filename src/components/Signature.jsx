@@ -66,7 +66,7 @@ const Signature = () => {
           text-base sm:text-lg
         "
       >
-        Order Now →
+        <a href="#contact">Order Now →</a>
       </button>
     </div>
   </div>
