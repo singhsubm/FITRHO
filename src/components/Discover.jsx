@@ -57,7 +57,7 @@ const Discover = () => {
   <h2
     className="
       text-stroke-style
-      text-[2.8rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[9rem]
+      text-[3rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[9rem]
       tracking-tighter leading-none
       mb-[-5%] md:mb-[-3%]
     "

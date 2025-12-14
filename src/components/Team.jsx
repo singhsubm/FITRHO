@@ -71,7 +71,7 @@ const Team = () => {
         <h2 className="text-stroke-style text-[4.5rem] md:text-[8rem] tracking-tighter leading-none mb-[-3%]">
             OUR
           </h2>
-          <h3 className="signature-font text-white font-6xl md:text-6xl ml-0 mt-5 tracking-wide drop-shadow-lg drop-shadow-amber-300">
+          <h3 className="signature-font text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl ml-0 mt-0 md:mt-5 tracking-wide drop-shadow-lg drop-shadow-amber-300">
             Team
           </h3>
       </div>
