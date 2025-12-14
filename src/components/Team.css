@@ -1,6 +1,6 @@
 /* Team Page Container */
 .team-page {
-  min-height: 100vh;
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
