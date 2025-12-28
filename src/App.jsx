@@ -7,6 +7,7 @@ import Discover from './components/Discover';
 import Commitment from './components/Commitment';
 import Team from './components/Team';
 import Footer from './components/Footer';
+import Faq from './components/Faq';
 
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
 
       <section id="team">
         <Team />
+      </section>
+
+      <section id="faq">
+        <Faq />
       </section>
 
       <section id="contact">

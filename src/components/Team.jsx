@@ -64,6 +64,7 @@ const Team = () => {
   };
 
   return (
+    
     <div className="team-page">
       
       {/* Header */}
