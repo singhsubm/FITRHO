@@ -7,34 +7,38 @@ import onemonth from "../assets/mockup/1monthpack.png"; // Background image
 import flaxseed from "../assets/mockup/flaxseed.jpeg"; // Background image
 import chiaseed from "../assets/mockup/chiaseed.jpeg"; // Background image
 import pumpkinseed from "../assets/mockup/pumpkin seed.jpeg"; 
+import { Link } from 'react-router-dom';
 
 const products = [
   {
     id: 1,
-    name: "Three Day Nutrition Pack",
+    name: "3 Day Nutrition Pack",
     image: threeday,
     description: "using high-quality materials, this pack is designed for comfort and durability during your workouts.",
     button: "Discover More",
     // background: flaxseed
-    background: "white"
+    background: "white",
+    nav: "/product"
   },
   {
     id: 2,
-    name: "Seven Day Nutrition Pack",
+    name: "7 Day Nutrition Pack",
     image: sevenday,
     description: "perfect for travel or everyday use, this pack combines nutrition and protien to keep you fit.",
     button: "Order Now",
     // background: chiaseed
-    background: "white"
+    background: "white",
+    nav: "/product"
   },
   {
     id: 3,
-    name: "One Month Nutrition Pack",
+    name: "30 Day Nutrition Pack",
     image: onemonth,
     description: "ideal for long-term use, this pack offers a comprehensive solution for your nutritional needs.",
     button: "Know More",
     // background: pumpkinseed
-    background: "white"
+    background: "white",
+    nav: "/product"
   }
 ];
 
@@ -46,7 +50,7 @@ const Discover = () => {
     //         backgroundImage: `url(${bg})`
     //     }
     // }
-     className="min-h-screen w-full relative flex flex-col justify-center object-cover bg-no-repeat bg-center bg-cover py-20 px-6 md:px-12 overflow-hidden">
+     className=" min-h-screen w-full relative flex flex-col justify-center object-cover bg-no-repeat bg-center bg-cover py-20 px-6 md:px-12 overflow-hidden">
       
 
       <div className="max-w-7xl mx-auto w-full z-10">
@@ -85,7 +89,7 @@ const Discover = () => {
         {/* Products Grid */}
         <div
         
-         className="grid grid-cols-1 md:grid-cols-3 gap-20">
+         className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {products.map((product) => (
             <div
             style={{
@@ -97,7 +101,7 @@ const Discover = () => {
             >
               
               {/* Image Container */}
-              <div className="h-70 w-full overflow-hidden relative flex justify-center items-center">
+              <div className="h-50 w-full overflow-hidden relative flex justify-center items-center xl:h-70 ">
                 <div className="absolute inset-0 z-10"></div>
                 <img 
                   src={product.image} 
@@ -107,21 +111,21 @@ const Discover = () => {
               </div>
 
               {/* Content */}
-              <div className="p-8 flex flex-col items-start space-y-4">
+              <div className="p-4 flex flex-col items-start space-y-2">
                 <div className="flex justify-between w-full items-baseline">
-                  <h4 className="text-2xl font-bold text-white  transition-colors">
+                  <h4 className="text-sm font-bold text-white  transition-colors">
                     {product.name}
                   </h4>
                 </div>
                 
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-xs leading-relaxed">
                   {product.description}
                 </p>
 
                 {/* Button */}
-                <button className="mt-4 w-full py-3 bg-transparent border-2 border-amber-300 text-amber-300 font-bold uppercase tracking-widest text-xs hover:bg-amber-300 hover:text-black  transition-all duration-300 rounded">
+                <Link to={product.nav} className="mt-4 w-full py-3 bg-transparent border-2 border-amber-300 text-amber-300 font-bold uppercase tracking-widest text-xs text-center hover:bg-amber-300 hover:text-black  transition-all duration-300 rounded">
                   {product.button}
-                </button>
+                </Link>
               </div>
             </div>
           ))}

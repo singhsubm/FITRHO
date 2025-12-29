@@ -32,7 +32,7 @@ const Commitment = () => {
           className="w-full h-full object-cover opacity-40"
         />
         {/* Dark Overlay to keep text readable */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/80 to-brand-dark"></div>
+        <div className="absolute inset-0 from-brand-dark via-brand-dark/80 to-brand-dark"></div>
       </div>
 
       {/* Main Content Container (z-10 to sit above background) */}
@@ -43,25 +43,25 @@ const Commitment = () => {
   <h2
     className="
       text-stroke-style
-      text-[2.8rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem]
+      text-[4rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[8rem]
       tracking-tighter leading-none
       mb-[-5%] md:mb-[-3%]
     "
   >
-    COMMITMENT
+    Quality
   </h2>
 
   <h3
     className="
       signature-font text-white
-      text-3xl sm:text-4xl md:text-6xl lg:text-7xl
+      text-4xl sm:text-4xl md:text-6xl lg:text-7xl
       mt-1 md:mt-0
       md:ml-50
       tracking-wide
       drop-shadow-lg drop-shadow-amber-300
     "
   >
-    to Quality
+    for you
   </h3>
 </div>
 

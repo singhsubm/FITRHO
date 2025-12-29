@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Hero.css'; // Reusing text styles
+import { Link } from 'react-router-dom';
 
 const faqData = [
   {
@@ -81,7 +82,7 @@ const Faq = () => {
                 onClick={() => toggleAccordion(index)}
                 className="w-full flex justify-between items-center p-6 text-left focus:outline-none group"
               >
-                <span className={`text-lg md:text-xl font-bold font-nunito transition-colors duration-300 ${activeIndex === index ? 'text-amber-300' : 'text-white group-hover:text-brand-gold'}`}>
+                <span className={`text-sm md:text-xl font-bold font-nunito transition-colors duration-300 ${activeIndex === index ? 'text-amber-300' : 'text-white group-hover:text-brand-gold'}`}>
                   {item.question}
                 </span>
                 
@@ -96,7 +97,7 @@ const Faq = () => {
               <div 
                 className={`transition-[max-height,opacity] duration-500 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}
               >
-                <div className="p-6 pt-0 text-gray-400 font-nunito leading-relaxed border-t border-white/5 mt-2">
+                <div className="p-6 pt-0 text-gray-400 font-nunito leading-relaxed text-xs md:text-sm border-t border-white/5 mt-2">
                   {item.answer}
                 </div>
               </div>
@@ -108,7 +109,7 @@ const Faq = () => {
         <div className="mt-16 text-center">
           <p className="text-gray-500 mb-4">Still have questions?</p>
           <button className="text-amber-300 border-b border-brand-gold pb-1 hover:text-white hover:border-white transition-all uppercase tracking-widest text-sm font-bold">
-            <a href="#contact">Contact Support</a>
+            <Link to="/contact" >Contact Support</Link>
           </button>
         </div>
 

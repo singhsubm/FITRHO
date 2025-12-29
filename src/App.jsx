@@ -8,50 +8,52 @@ import Commitment from './components/Commitment';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import Faq from './components/Faq';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProductsPage from './components/ProductsPage';
+import ContactPage from './components/ContactPage';
+import StoryPage from './components/StoryPage';
 
 
+const Home = () => {
+  return (
+    <>
+      <section id="home"><Hero /></section>
+      <section id="story"><Signature /></section>
+      <section id="services"><Discover /></section>
+      <section id="quality"><Commitment /></section>
+      <section id="commitment"><Schedule /></section>
+      <section id="team"><Team /></section>
+      <section id="faq"><Faq /></section>
+    </>
+  );
+};
 function App() {
 
   return (
-    <>
-    <div className="bg-slate-950 min-h-screen text-brand-gold font-nunito overflow-x-hidden">
+    <Router>
+      <div className="bg-[#020618] min-h-screen text-brand-gold font-nunito overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
+        {/* Navbar is outside Routes so it shows on ALL pages */}
+        <Navbar />
+        
+        <Routes>
+          {/* Main Landing Page */}
+          <Route path="/" element={<Home />} />
+          
+          {/* New Product Page */}
+          <Route path="/product" element={<ProductsPage />} />
 
-      <Navbar />
-      <section id="home">
-        <Hero />
-      </section>
+          <Route path="/contact" element={<ContactPage />}/>
 
-      <section id="story">
-        <Signature />
-      </section>
+          <Route path="/story" element={<StoryPage />} />
+        </Routes>
 
-      <section id="schedule">
-        <Schedule />
-      </section>
-
-      <section id="services">
-        {/* <Discover /> */}
-        <Discover />
-      </section>
-
-      <section id="commitment">
-        <Commitment />
-      </section>
-
-      <section id="team">
-        <Team />
-      </section>
-
-      <section id="faq">
-        <Faq />
-      </section>
-
-      <section id="contact">
+        {/* Footer shows on all pages */}
         <Footer />
-      </section>
-    </div>
-    </>
-  )
-}
+      </div>
+    </Router>
+  );
+};
+
+
 
 export default App

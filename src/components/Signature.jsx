@@ -2,6 +2,7 @@ import React from "react";
 import "./Signature.css"; // Importing CSS for the text style
 import bg2 from "../assets/mockup/pista.png"; // Background image
 import bg from "../assets/mockup/bg.png"; // Background image
+import { Link } from "react-router-dom";
 
 const Signature = () => {
   return (
@@ -46,7 +47,7 @@ const Signature = () => {
 
     {/* BUTTONS */}
     <div className="pt-4 w-full flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6">
-      <button
+      <Link to="/story"
         className="
           text-white border-b border-brand-gold pb-1
             transition-all
@@ -56,7 +57,7 @@ const Signature = () => {
         "
       >
         Read The Full Story
-      </button>
+      </Link>
 
       <button
         className="
@@ -66,7 +67,7 @@ const Signature = () => {
           text-base sm:text-lg
         "
       >
-        <a href="#contact">Order Now →</a>
+        <Link to="/product">Order Now →</Link>
       </button>
     </div>
   </div>
