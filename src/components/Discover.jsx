@@ -50,7 +50,7 @@ const Discover = () => {
     //         backgroundImage: `url(${bg})`
     //     }
     // }
-     className=" min-h-screen w-full relative flex flex-col justify-center object-cover bg-no-repeat bg-center bg-cover py-20 px-6 md:px-12 overflow-hidden">
+     className=" min-h-screen w-full relative flex flex-col justify-center py-20 px-6 md:px-12 overflow-hidden bg-[#0b0600]">
       
 
       <div className="max-w-7xl mx-auto w-full z-10">
@@ -123,7 +123,7 @@ const Discover = () => {
                 </p>
 
                 {/* Button */}
-                <Link to={product.nav} className="mt-4 w-full py-3 bg-transparent border-2 border-amber-300 text-amber-300 font-bold uppercase tracking-widest text-xs text-center hover:bg-amber-300 hover:text-black  transition-all duration-300 rounded">
+                <Link to={product.nav} className="mt-4 w-full lg:py-5 py-3 bg-transparent border-2 border-amber-300 text-amber-300 font-bold uppercase tracking-widest text-xs text-center hover:bg-amber-300 hover:text-black  transition-all duration-300 rounded-xl">
                   {product.button}
                 </Link>
               </div>

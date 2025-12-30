@@ -12,6 +12,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  /*-webkit-text-stroke: 2px rgba(255, 215, 0, 0.3);*/ /* Gold Stroke */
   -webkit-text-stroke: 2px rgba(255, 215, 0, 0.3); /* Gold Stroke */
   line-height: 0.8; /* Tighter spacing */
 }

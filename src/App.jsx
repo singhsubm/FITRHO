@@ -28,6 +28,7 @@ const Home = () => {
   );
 };
 function App() {
+  // bg-[#020618]
 
   return (
     <Router>

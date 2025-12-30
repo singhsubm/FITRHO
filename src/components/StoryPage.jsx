@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Hero.css'; // Reusing global styles
+import './Global.css'; // Reusing global styles
 import pishta from "../assets/mockup/pishta.jpeg"
 
 const ingredients = [

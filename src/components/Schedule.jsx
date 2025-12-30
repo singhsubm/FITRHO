@@ -28,7 +28,7 @@ const Schedule = () => {
   };
 
   return (
-  <div className="schedule-wrapper">
+  <div className="schedule-wrapper bg-[#0b0600] /*bg-[#ffc2d5]*/">
     <div className="w-full min-h-screen bg-brand-dark flex flex-col justify-center items-center py-20">
 
       <div

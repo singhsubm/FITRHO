@@ -6,7 +6,7 @@ const Footer = () => {
   const [name, setName] = React.useState("Anoynomous");
   return (
     // Changed: min-h-[50vh] and reduced padding (py-10 instead of pt-20)
-    <footer className="w-full bg-[#15161a] border-t border-white/10 py-10 px-6 md:px-12 relative overflow-hidden min-h-[50vh] flex flex-col justify-center">
+    <footer className="z-100 w-full bg-[#15161a] border-t border-white/10 py-10 px-6 md:px-12 relative overflow-hidden min-h-[50vh] flex flex-col justify-center">
       
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative z-10 items-center">

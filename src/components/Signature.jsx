@@ -8,7 +8,7 @@ const Signature = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bg2})` }}
-      className="min-h-fit w-full relative py-20 px-6 md:px-12 flex flex-col justify-center overflow-hidden object-cover bg-no-repeat bg-center"
+      className="min-h-screen w-full relative py-20 px-6 md:px-12 flex flex-col justify-center overflow-hidden object-cover bg-no-repeat bg-center"
     >
       <div
   className="
@@ -51,8 +51,8 @@ const Signature = () => {
         className="
           text-white border-b border-brand-gold pb-1
             transition-all
-          uppercase tracking-widest
-          text-[10px] sm:text-xs md:text-sm
+          uppercase tracking-widest text-2xl
+          text-[10px] md:text-sm
           font-bold
         "
       >
@@ -94,7 +94,6 @@ const Signature = () => {
         h-[40vh] sm:h-[50vh] lg:h-[60vh]
         object-cover object-center
         rounded-2xl
-        md:grayscale hover:grayscale-0
         transition-all duration-700
         shadow-2xl
       "
