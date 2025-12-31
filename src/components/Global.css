@@ -6,6 +6,3 @@
   src: url("https://assets.codepen.io/756881/Longline+Quart+FREE.ttf") format("truetype");
 }
 
-html, body {
-  overflow-x: clip;
-}

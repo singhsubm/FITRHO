@@ -12,6 +12,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductsPage from './components/ProductsPage';
 import ContactPage from './components/ContactPage';
 import StoryPage from './components/StoryPage';
+import { CartProvider } from './context/CartContext';
+import CartPage from './components/CartPage';
 
 
 const Home = () => {
@@ -31,6 +33,7 @@ function App() {
   // bg-[#020618]
 
   return (
+    <CartProvider>
     <Router>
       <div className="bg-[#020618] min-h-screen text-brand-gold font-nunito overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
         {/* Navbar is outside Routes so it shows on ALL pages */}
@@ -46,12 +49,15 @@ function App() {
           <Route path="/contact" element={<ContactPage />}/>
 
           <Route path="/story" element={<StoryPage />} />
+
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
 
         {/* Footer shows on all pages */}
         <Footer />
       </div>
     </Router>
+    </CartProvider>
   );
 };
 

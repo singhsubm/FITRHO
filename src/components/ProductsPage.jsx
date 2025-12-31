@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css'; 
+import { useCart } from '../context/CartContext';
 
 // 1. Updated Data with Categories and 'isNew' flags
 const allProducts = [
@@ -83,6 +84,7 @@ const allProducts = [
 ];
 
 const ProductsPage = () => {
+    const { addToCart } = useCart();
   // State for Filters
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -250,7 +252,9 @@ const ProductsPage = () => {
                     </div>
                   </div>
 
-                  <button className="w-full bg-transparent border border-amber-300 text-white py-2 rounded-full font-bold text-xs tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 flex items-center justify-center gap-2">
+                  <button
+                  onClick={() => addToCart(product)}
+                   className="w-full bg-transparent border border-amber-300 text-white py-2 rounded-full font-bold text-xs tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 flex items-center justify-center gap-2">
                     Add to Cart 🛒
                   </button>
                 </div>
