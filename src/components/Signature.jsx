@@ -1,13 +1,13 @@
 import React from "react";
 import "./Signature.css"; // Importing CSS for the text style
-import bg2 from "../assets/mockup/pista.png"; // Background image
+// import bg2 from "../assets/mockup/pista.png"; // Background image
 import bg from "../assets/mockup/bg.png"; // Background image
 import { Link } from "react-router-dom";
 
 const Signature = () => {
   return (
     <div
-      style={{ backgroundImage: `url(${bg2})` }}
+      // style={{ backgroundImage: `url(${bg2})` }}
       className="min-h-screen w-full relative py-20 px-6 md:px-12 flex flex-col justify-center overflow-hidden object-cover bg-no-repeat bg-center"
     >
       <div
@@ -35,13 +35,10 @@ const Signature = () => {
     {/* TEXT */}
     <div className="space-y-6 text-gray-300 font-nunito text-base sm:text-lg leading-relaxed">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-        lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-        malesuada.
+        A thoughtfully designed, day-wise nutrition system that removes daily food decisions and helps you stay consistent without effort.
       </p>
       <p>
-        Suspendisse potenti. Ut pharetra augue nec augue. Nam elit magna,
-        hendrerit sit amet, tincidunt ac, viverra sed, nulla.
+        We don’t just sell dry fruits. We create a structured, day-wise nutrition system with thoughtfully portioned ingredients—so eating healthy becomes simple, consistent, and effortless.
       </p>
     </div>
 

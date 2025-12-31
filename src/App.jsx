@@ -25,7 +25,6 @@ const Home = () => {
       <section id="quality"><Commitment /></section>
       <section id="commitment"><Schedule /></section>
       <section id="team"><Team /></section>
-      <section id="faq"><Faq /></section>
     </>
   );
 };
@@ -35,7 +34,7 @@ function App() {
   return (
     <CartProvider>
     <Router>
-      <div className="bg-[#020618] min-h-screen text-brand-gold font-nunito overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
+      <div className="bg-black min-h-screen text-brand-gold font-nunito overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
         {/* Navbar is outside Routes so it shows on ALL pages */}
         <Navbar />
         
@@ -51,6 +50,8 @@ function App() {
           <Route path="/story" element={<StoryPage />} />
 
           <Route path="/cart" element={<CartPage />} />
+
+          <Route path="/faq" element={<Faq />} />
         </Routes>
 
         {/* Footer shows on all pages */}

@@ -42,7 +42,7 @@ const Footer = () => {
               <div className="space-y-2">
                 <h4 className="text-white font-bold uppercase text-xs">Resources</h4>
                 <ul className="space-y-1 text-gray-500 text-xs font-nunito">
-                  <li className="hover:text-brand-gold cursor-pointer"><a href="#faq">FAQs</a></li>
+                  <Link to="/faq" className="hover:text-brand-gold cursor-pointer"><a href="#faq">FAQs</a></Link>
                   <li className="hover:text-brand-gold cursor-pointer"><a href="#review">Reviews</a></li>
                   <li className="hover:text-brand-gold cursor-pointer"><a href="#support">Support</a></li>
                 </ul>

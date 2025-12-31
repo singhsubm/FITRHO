@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Hero.css'; // Reusing text styles
 import { Link } from 'react-router-dom';
 
@@ -46,11 +46,16 @@ const faqData = [
 ];
 
 const Faq = () => {
+  
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-brand-dark relative py-20 px-6 md:px-12 flex flex-col items-center">
