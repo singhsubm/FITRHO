@@ -170,7 +170,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .carousel { height: 250px; }
+  .carousel { height: 450px; }
   .falvourCard { width: 240px; height: 300px; }
   
   .falvourCard.active { width: 250px; height: 300px; }
