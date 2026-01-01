@@ -80,7 +80,7 @@ const Team = () => {
       <div className="carousel-container relative w-full ">
         
         {/* Left Arrow */}
-        <button className="nav-arrow left " onClick={handlePrev}>‹</button>
+        <button className="nav-arrow left flex items-center bg-amber-300 justify-center" onClick={handlePrev}>←</button>
 
         {/* Track */}
         <div className="w-70 mx-auto my-auto h-full">
@@ -104,7 +104,7 @@ const Team = () => {
         </div>
 
         {/* Right Arrow */}
-        <button className="nav-arrow right" onClick={handleNext}><span>›</span></button>
+        <button className="nav-arrow right bg-amber-300 flex items-center justify-center" onClick={handleNext}><span>→</span></button>
 
       </div>
 
