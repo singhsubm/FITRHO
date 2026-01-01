@@ -1,5 +1,5 @@
 .flavours-root {
-  min-height: 100vh;
+  min-height: fit-content;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -73,34 +73,17 @@
 /* Active Image: Hawa mein upar (Pop-up) */
 .falvourCard.active .img-container {
   top: 0; /* Box ke top edge par */
-  transform: translate(-50%, -30%) scale(1.2); /* Upar aur Bada */
+  transform: translate(-50%, -20%) scale(1.2); /* Upar aur Bada */
 }
 
 /* Active Details: Visible */
 .falvourCard.active .details {
   opacity: 1;
   transform: translateY(0);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  text-align: start;
 }
 
-.falvourCard.active h4 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-    line-height: 1;
-    color: #000;
-}
-.falvourCard.active p {
-    color: #333;
-    font-size: 0.9rem;
-    line-height: 1.2;
-    margin-bottom: 10px;
-}
-.falvourCard.active span {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #000;
-}
 
 /* === NEIGHBORS (Positioning) === */
 
@@ -148,14 +131,15 @@
 
 /* Nav Buttons */
 .nav {
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .nav button {
-  background: none;
+  /* background: ; */
   border: 1px solid #555;
-  color: white;
+  color: black;
   font-size: 2rem;
   margin: 0 10px;
+  font-weight: bold;
   padding: 4px 16px;
   cursor: pointer;
   border-radius: 50%;
@@ -165,7 +149,9 @@
 .nav button:hover {
     background: #FCD34D;
     color: black;
-    border-color: #FCD34D;
+    /* border-color: #FCD34D; */
+    transform: scale(1.1);
+    transition: all 0.2s ease;
 }
 
 /* Responsive */

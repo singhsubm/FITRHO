@@ -17,7 +17,7 @@ const flavours = [
     id: 1,
     name: "Monday-Reset",
     desc: "Energizing mix to kickstart your week.",
-    price: 199,
+    ingredients: "4 almonds, 1 small handful raisins, 1 spoon flax seeds, 1 spoon pumpkin seeds",
     weight: "75gm",
     image: b1,
   },
@@ -25,7 +25,7 @@ const flavours = [
     id: 2,
     name: "Tuesday-Activate ",
     desc: "Protein-packed for active days.",
-    price: 199,
+    ingredients: "4 walnuts, 1 small handful dried cranberries, 1 spoon chia seeds, 1 spoon sunflower seeds",
     weight: "75gm",
     image: b2,
   },
@@ -33,7 +33,7 @@ const flavours = [
     id: 3,
     name: "Wednesday-Align",
     desc: "Balanced blend for midweek focus.",
-    price: 180,
+    ingredients: "4 cashews, 1 small handful dried apricots, 1 spoon hemp seeds, 1 spoon sesame seeds",
     weight: "75gm",
     image:
       b3,
@@ -42,7 +42,7 @@ const flavours = [
     id: 4,
     name: "Thursday-Build",
     desc: "Nutrient-dense for muscle growth.",
-    price: 199,
+    ingredients: "4 pecans, 1 small handful dried figs, 1 spoon poppy seeds, 1 spoon flax seeds",
     weight: "75gm",
     image:
       b4,
@@ -51,7 +51,7 @@ const flavours = [
     id: 5,
     name: "Friday-Perform",
     desc: "Endurance mix for peak performance.",
-    price: 199,
+    ingredients: "4 hazelnuts, 1 small handful dried cherries, 1 spoon chia seeds, 1 spoon pumpkin seeds",
     weight: "75gm",
     image:
       b6,
@@ -60,7 +60,7 @@ const flavours = [
     id: 6,
     name: "Saturday-Recover",
     desc: "Soothing blend for recovery days.",
-    price: 210,
+    ingredients: "4 macadamia nuts, 1 small handful dried blueberries, 1 spoon hemp seeds, 1 spoon sesame seeds",
     weight: "75gm",
     image:
       b7,
@@ -69,7 +69,7 @@ const flavours = [
     id: 7,
     name: "Sunday-Enjoy",
     desc: "Delightful mix for a relaxed day.",
-    price: 210,
+    ingredients: "4 brazil nuts, 1 small handful dried mango, 1 spoon poppy seeds, 1 spoon sunflower seeds",
     weight: "75gm",
     image:
       b3,
@@ -110,16 +110,10 @@ const FlavoursPage = () => {
   };
 
   return (
-    <div className="flavours-root pt-20 pb-20 md:w-[80%] md:mx-auto">
-      <h2 className="text-stroke-style text-[4.5rem] md:text-[8rem] tracking-tighter leading-none mb-[-3%]">
-        OUR
-      </h2>
-      <h3 className="signature-font text-white text-4xl sm:text-5xl md:text-7xl -mt-6 drop-shadow-lg drop-shadow-amber-300">
-        Offerings
-      </h3>
+    <div className="flavours-root pb-20 md:w-[80%] md:mx-auto relative">
 
       <div
-        className="carousel mt-40"
+        className="carousel mt-20"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -135,19 +129,21 @@ const FlavoursPage = () => {
             </div>
 
             <div className="details">
-              <h4>
-                {item.name} <span className="text-sm">({item.weight})</span>
+              <h4 className="text-lg lg:text-2xl font-bold text-black">
+                {item.name} <span className="text-sm lg:text-xl">({item.weight})</span>
               </h4>
-              <p>{item.desc}</p>
-              <span>₹ {item.price}</span>
+              <p className="text-xs text-zinc-900 underline lg:text-lg">{item.desc}</p><br />
+              <p className="ingredients text-xs lg:text-sm text-zinc-700">{item.ingredients}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="nav">
-        <button onClick={prev}>‹</button>
-        <button onClick={next}>›</button>
+      <div className="nav w-full absolute lg:top-0 left-0">
+        <div className="w-full flex px-4 items-center lg:justify-end justify-center h-full">
+          <button onClick={prev} className="flex items-center bg-amber-300 justify-center">{"←"}</button>
+          <button onClick={next} className="flex items-center bg-amber-300 justify-center">{"→"}</button>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Signature = () => {
   return (
     <div
       // style={{ backgroundImage: `url(${bg2})` }}
-      className="min-h-screen w-full relative py-20 px-6 md:px-12 flex flex-col justify-center overflow-hidden object-cover bg-no-repeat bg-center"
+      className="min-h-fit w-full relative py-20 px-6 md:px-12 flex flex-col justify-center overflow-hidden object-cover bg-no-repeat bg-center"
     >
       <div
   className="
@@ -70,7 +70,7 @@ const Signature = () => {
   </div>
 
   {/* RIGHT IMAGE */}
-  <div className="w-full lg:w-1/4 relative group flex justify-center">
+  <div className="hidden lg:block w-full lg:w-1/4 relative group">
     {/* Glow Background */}
 
     {/* <div className=" absolute bg-yellow-500 w-80 h-80 rotate-45 rounded-4xl"></div> */}
