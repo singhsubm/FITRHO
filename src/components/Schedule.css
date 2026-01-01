@@ -1,6 +1,7 @@
 /* Schedule Container */
 .schedule-container {
   display: flex;
+  flex-wrap: nowrap;
   flex: 1;
   max-width: 1440px;
   width: 100%;
@@ -15,6 +16,7 @@
 .card {
   flex: 1 1 1%; /* Collapsed state */
   position: relative;
+  min-width: 0;
   opacity: 0.4; /* Dimmed by default when one is hovered */
   transition: flex 600ms cubic-bezier(0.25, 1, 0.5, 1), opacity 250ms ease;
   height: 60vh; /* Fixed height for uniformity */
@@ -127,5 +129,3 @@
     display: block;
   }
 }
-
-

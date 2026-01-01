@@ -1,7 +1,7 @@
 import React from "react";
 import "./Signature.css"; // Importing CSS for the text style
 // import bg2 from "../assets/mockup/pista.png"; // Background image
-import bg from "../assets/mockup/bg.png"; // Background image
+import bg from "../assets/mockup/mockup.png"; // Background image
 import { Link } from "react-router-dom";
 
 const Signature = () => {
@@ -33,11 +33,11 @@ const Signature = () => {
     </div>
 
     {/* TEXT */}
-    <div className="space-y-6 text-gray-300 font-nunito text-base sm:text-lg leading-relaxed">
+    <div className="space-y-6 text-gray-300 font-nunito text-sm sm:text-2xl leading-relaxed font-semibold">
       <p>
-        A thoughtfully designed, day-wise nutrition system that removes daily food decisions and helps you stay consistent without effort.
+        A thoughtfully designed, <span className="text-amber-300 font-extrabold text-xl sm:text-4xl ">#DayWise</span> nutrition system that removes daily food decisions and helps you stay consistent without effort.
       </p>
-      <p>
+      <p className="hidden sm:block">
         We don’t just sell dry fruits. We create a structured, day-wise nutrition system with thoughtfully portioned ingredients—so eating healthy becomes simple, consistent, and effortless.
       </p>
     </div>
@@ -48,8 +48,8 @@ const Signature = () => {
         className="
           text-white border-b border-brand-gold pb-1
             transition-all
-          uppercase tracking-widest text-2xl
-          text-[10px] md:text-sm
+          uppercase tracking-widest text-xs
+          md:text-sm
           font-bold
         "
       >
@@ -58,13 +58,13 @@ const Signature = () => {
 
       <button
         className="
-          text-white border-2 border-amber-300
-          px-6 py-2 rounded-md
-          hover:text-amber-300 transition-all duration-300
-          text-base sm:text-lg
+          text-black font-bold bg-amber-300
+          px-8 py-3 rounded-full
+          hover:scale-105 transition-all duration-300
+          text-base sm:text-lg cursor-pointer
         "
       >
-        <Link to="/product">Order Now →</Link>
+        <Link to="/product">Order Now <span className="font-extrabold animate-bounce">→</span></Link>
       </button>
     </div>
   </div>
@@ -72,27 +72,18 @@ const Signature = () => {
   {/* RIGHT IMAGE */}
   <div className="w-full lg:w-1/4 relative group flex justify-center">
     {/* Glow Background */}
-    <div
-      className="
-        absolute inset-0 bg-brand-gold rounded-2xl
-        translate-x-2 translate-y-2 opacity-20
-        group-hover:translate-x-1 group-hover:translate-y-1
-        transition-transform duration-500
-      "
-    ></div>
 
-    <img
+    {/* <div className=" absolute bg-yellow-500 w-80 h-80 rotate-45 rounded-4xl"></div> */}
+      <img
       src={bg}
       alt="Signature Training"
       loading="lazy"
       className="
         relative z-10
         w-full max-w-sm sm:max-w-md md:max-w-lg
-        h-[40vh] sm:h-[50vh] lg:h-[60vh]
-        object-cover object-center
-        rounded-2xl
-        transition-all duration-700
-        shadow-2xl
+        h-[30vh] sm:h-[50vh] lg:h-[30vh]
+        object-fill object-center
+        lg:scale-180
       "
     />
   </div>

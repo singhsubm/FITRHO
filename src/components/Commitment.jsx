@@ -42,26 +42,18 @@ const Commitment = () => {
         <div className="text-center md:text-left">
   <h2
     className="
-      text-stroke-style
-      text-[4rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[8rem]
-      tracking-tighter leading-none
-      mb-[-5%] md:mb-[-3%]
+      text-stroke-style text-[5rem] sm:text-[6rem] md:text-[8rem] tracking-tighter 
     "
   >
-    Quality
+    OUR
   </h2>
 
   <h3
     className="
-      signature-font text-white
-      text-4xl sm:text-4xl md:text-6xl lg:text-7xl
-      mt-1 md:mt-0
-      md:ml-50
-      tracking-wide
-      drop-shadow-lg drop-shadow-amber-300
+      signature-font text-white text-4xl sm:text-5xl md:text-7xl -mt-6 drop-shadow-lg drop-shadow-amber-300
     "
   >
-    for you
+    Quality
   </h3>
 </div>
 

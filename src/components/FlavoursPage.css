@@ -1,0 +1,186 @@
+.flavours-root {
+  min-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  
+}
+
+.carousel {
+  position: relative;
+  height: 500px; /* Thoda height badhaya taaki pop-up image kate nahi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* 3D effect ke liye zaroori */
+}
+
+/* === BASE falvourCard STYLE (INACTIVE) === */
+.falvourCard {
+  position: absolute;
+  width: 400px;
+  height: 320px;
+  background: linear-gradient(180deg, rgb(255, 107, 107), rgb(255, 0, 0)); /* RED BACKGROUND (Jaisa tumne manga) */
+  border-radius: 20px;
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Content niche rakhne ke liye */
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  padding-bottom: 20px;
+}
+
+/* Image default state (Inactive) */
+.img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    transition: all 0.6s ease;
+}
+
+/* .falvourCard img {
+  width: 100%;
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.3));
+} */
+
+/* Details Hidden by default (Inactive) */
+.details {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* === ACTIVE falvourCard STYLE (CENTER) === */
+.falvourCard.active {
+  width: 340px;
+  height: 400px; /* Bada size */
+  background: linear-gradient(180deg, #FCD34D, #D97706); /* Tumhara wala Gradient */
+  z-index: 50;
+  opacity: 1;
+  overflow: visible;
+  transform: translateX(0) scale(1);
+  justify-content: flex-end;
+}
+
+/* Active Image: Hawa mein upar (Pop-up) */
+.falvourCard.active .img-container {
+  top: 0; /* Box ke top edge par */
+  transform: translate(-50%, -30%) scale(1.2); /* Upar aur Bada */
+}
+
+/* Active Details: Visible */
+.falvourCard.active .details {
+  opacity: 1;
+  transform: translateY(0);
+  margin-bottom: 30px;
+}
+
+.falvourCard.active h4 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    line-height: 1;
+    color: #000;
+}
+.falvourCard.active p {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.falvourCard.active span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #000;
+}
+
+/* === NEIGHBORS (Positioning) === */
+
+/* Level 1 Neighbors */
+.falvourCard.prev-1 {
+  transform: translateX(-300px) scale(0.85);
+  z-index: 40;
+  opacity: 1;
+}
+.falvourCard.next-1 {
+  transform: translateX(300px) scale(0.85);
+  z-index: 40;
+  opacity: 1;
+}
+
+/* Level 2 Neighbors */
+.falvourCard.prev-2 {
+  transform: translateX(-520px) scale(0.7);
+  z-index: 30;
+  opacity: 1;
+}
+.falvourCard.next-2 {
+  transform: translateX(520px) scale(0.7);
+  z-index: 30;
+  opacity: 1;
+}
+
+/* Level 3 Neighbors (Edges) */
+.falvourCard.prev-3 {
+  transform: translateX(-680px) scale(0.6);
+  z-index: 20;
+  opacity: 1;
+}
+.falvourCard.next-3 {
+  transform: translateX(680px) scale(0.6);
+  z-index: 20;
+  opacity: 1;
+}
+
+/* Hidden Cards */
+.falvourCard.hidden {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Nav Buttons */
+.nav {
+  margin-top: 10px;
+}
+.nav button {
+  background: none;
+  border: 1px solid #555;
+  color: white;
+  font-size: 2rem;
+  margin: 0 10px;
+  padding: 4px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.nav button:hover {
+    background: #FCD34D;
+    color: black;
+    border-color: #FCD34D;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel { height: 250px; }
+  .falvourCard { width: 240px; height: 300px; }
+  
+  .falvourCard.active { width: 250px; height: 300px; }
+  .falvourCard.active .img-container { transform: translate(-50%, -40%) scale(1); }
+
+  .falvourCard.prev-1 { transform: translateX(-160px) scale(0.8); z-index: 40; }
+  .falvourCard.next-1 { transform: translateX(160px) scale(0.8); z-index: 40; }
+  
+  .falvourCard.prev-2 { transform: translateX(-260px) scale(0.7); opacity: 0.5; z-index: 30;}
+  .falvourCard.next-2 { transform: translateX(260px) scale(0.7); opacity: 0.5; z-index: 30;}
+  
+  .falvourCard.prev-3, .falvourCard.next-3 { opacity: 1; }
+}

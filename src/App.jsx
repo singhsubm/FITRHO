@@ -14,6 +14,7 @@ import ContactPage from './components/ContactPage';
 import StoryPage from './components/StoryPage';
 import { CartProvider } from './context/CartContext';
 import CartPage from './components/CartPage';
+import FlavoursPage from './components/FlavoursPage';
 
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
     <>
       <section id="home"><Hero /></section>
       <section id="story"><Signature /></section>
-      <section id="services"><Discover /></section>
+      <section id="flavour"><FlavoursPage /></section>
       <section id="quality"><Commitment /></section>
       <section id="commitment"><Schedule /></section>
       <section id="team"><Team /></section>
