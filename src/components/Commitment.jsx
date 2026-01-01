@@ -2,6 +2,7 @@ import React from 'react';
 import './Signature.css'; // Reusing your text styles
 import bgImage from "../assets/mockup/dryfruitbg.jpeg"; // Background image
 import comittmentBg from "../assets/mockup/comittmentbg.png"; // Background image
+import { Link } from 'react-router-dom';
 
 const features = [
   {
@@ -81,9 +82,9 @@ const Commitment = () => {
               </div>
 
               {/* Button inside Glass Card */}
-              <button className="bg-amber-300 text-brand-dark px-8 py-3 rounded-md font-bold transition-scale duration-300 mt-4 underline hover:bg-white">
+              <Link to={"product"} className="bg-amber-300 text-brand-dark px-8 py-3 rounded-md font-bold transition-scale duration-300 mt-4 underline hover:bg-white">
                 Start Your Journey
-              </button>
+              </Link>
             </div>
 
             {/* Right Side: Image inside Glass Card */}
