@@ -139,7 +139,7 @@ const FlavoursPage = () => {
         ))}
       </div>
 
-      <div className="nav w-full absolute lg:top-0 left-0">
+      <div className="nav w-full absolute lg:top-5 left-0">
         <div className="w-full flex px-4 items-center lg:justify-end justify-center h-full">
           <button onClick={prev} className="flex items-center bg-amber-300 justify-center">{"←"}</button>
           <button onClick={next} className="flex items-center bg-amber-300 justify-center">{"→"}</button>

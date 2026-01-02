@@ -15,6 +15,7 @@ import StoryPage from './components/StoryPage';
 import { CartProvider } from './context/CartContext';
 import CartPage from './components/CartPage';
 import FlavoursPage from './components/FlavoursPage';
+import BrandMarquee from './components/BrandMarquee';
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <section id="flavour"><FlavoursPage /></section>
       <section id="quality"><Commitment /></section>
       <section id="commitment"><Schedule /></section>
+      <section id="brand"><BrandMarquee /></section>
       <section id="team"><Team /></section>
     </>
   );

@@ -10,6 +10,7 @@ import third from "../assets/mockup/b3.png";
 import fourth from "../assets/mockup/b4.png";
 import sixth from "../assets/mockup/b6.png";
 import seventh from "../assets/mockup/b7.png";
+import BrandMarquee from './BrandMarquee';
 
 
 gsap.registerPlugin(Flip);
@@ -107,8 +108,23 @@ const Hero = () => {
     >
       
       {/* Background Text FITRHO */}
-      <div className="fitrho-text select-none hidden md:block">
+      <div className="fitrho-text select-none hidden lg:block">
         FITRHO
+      </div>
+
+      <div className='absolute w-full top-20 lg:hidden'>
+        <div className="text-center text-stroke-style text-[4rem] md:text-[8rem] tracking-tighter">
+        FITRHO
+      </div>
+      <h3 className="signature-font text-center text-white text-4xl sm:text-5xl md:text-7xl -mt-4 drop-shadow-lg drop-shadow-amber-300">
+        Daily Habit
+      </h3>
+      </div>
+
+      <div
+  className="w-full z-10 lg:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+>
+        <BrandMarquee />
       </div>
 
       {/* The Header Area where image pops up */}
@@ -121,7 +137,7 @@ const Hero = () => {
       </div>
 
       {/* The Wheel Section */}
-      <section className="slider-section">
+      <section className="lg:block hidden slider-section">
         <div 
           className="wheel" 
           ref={wheelRef}
