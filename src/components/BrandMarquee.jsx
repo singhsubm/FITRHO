@@ -13,7 +13,7 @@ const brands = [
 
 const BrandMarquee = () => {
   return (
-    <div className="w-full hidden lg:block py-16 m-auto overflow-hidden relative">
+    <div className="w-full py-16 m-auto overflow-hidden relative">
       
       {/* Internal Styles for Animation */}
       <style>{`

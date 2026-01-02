@@ -26,7 +26,7 @@ const Home = () => {
       <section id="flavour"><FlavoursPage /></section>
       <section id="quality"><Commitment /></section>
       <section id="commitment"><Schedule /></section>
-      <section id="brand"><BrandMarquee /></section>
+      <section id="brand" className='hidden lg:block'><BrandMarquee /></section>
       <section id="team"><Team /></section>
     </>
   );
