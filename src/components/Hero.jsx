@@ -104,7 +104,7 @@ const Hero = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bg})` }}
-      className="relative w-full h-screen overflow-hidden bg-cover bg-center bg-brand-dark"
+      className="relative w-full h-[90vh] lg:h-screen overflow-hidden bg-cover bg-center bg-brand-dark"
     >
       
       {/* Background Text FITRHO */}
